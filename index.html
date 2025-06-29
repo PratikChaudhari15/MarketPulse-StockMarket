@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📈 MarketPulse – Live Stock Tracker</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="header">
+      <h1>📈 MarketPulse – Live Stock Tracker</h1>
+      <div class="input-container">
+        <input type="text" id="stock-input" placeholder="Enter Stock Symbol">
+        <button id="search-btn">Search</button>
+        <button id="add-to-watchlist-btn" class="btn-style">⭐ Add to Watchlist</button>
+
+        <button id="theme-toggle" title="Toggle Theme">🌙</button>
+        
+      </div>
+       <div>
+        <h5 class="info-text">
+          <em>Enter a valid US stock symbol to view price and trend.<br> Try AAPL, MSFT, AMZN, NVDA, GOOGL, META, TSLA, BRK.B, JPM, UNH, AVGO, COST, AMD</em>
+        </h5>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="stock-card">
+        <h2 id="stock-name">Stock Name</h2>
+        <p id="stock-price">Price: $0.00</p>
+        <p id="stock-change">Change: 0.00%</p>
+      </div>
+      
+      <div class="chart-container" id="chart-container">
+        <canvas id="stock-chart"></canvas>
+      </div>
+      <div class="alert-section">
+        <p id="alert-stock-symbol" style="margin-bottom: 10px; font-weight: 600;">No stock selected.</p>
+        <h3>🔔 Set Price Alert</h3>
+        <div class="alert-controls">
+          <input type="number" id="alert-price" placeholder="Enter Target Price">
+          <button id="set-alert-btn" class="btn-style">Set Alert</button>
+          <button id="clear-alert-btn" class="btn-style" style="background-color: crimson;">Clear Alert</button>
+        </div>
+        <p id="alert-message" class="alert-msg"></p>
+      </div>
+      <div class="watchlist-section">
+        <h3>Your Watchlist</h3>
+        <ul id="watchlist"></ul>
+      </div>
+    </main>
+  </div>
+  <footer class="footer">
+  <div class="footer-content">
+    <p>&copy; <span id="currentYear"></span> <strong>MarketPulse</strong>. All rights reserved.</p>
+    <p class="powered">📡 Data Powered by <a href="https://www.alphavantage.co" target="_blank">Alpha Vantage</a></p>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
