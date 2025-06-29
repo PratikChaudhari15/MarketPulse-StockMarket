@@ -23,11 +23,9 @@ MarketPulse is a simple, responsive, and interactive stock tracking web applicat
 - **Chart.js** – Chart rendering
 - **Alpha Vantage API** – Stock market data
 
-💡 Future Improvements
-Add trending stock suggestions
+## 🧠 How It Works
 
-Add search history
-
-Fetch data using WebSocket for live updates
-
-Deploy to GitHub Pages / Netlify / Vercel
+- 🔎 **User enters a stock symbol** → App fetches data using the **Alpha Vantage API**
+- 📊 **Real-time update** → Stock name, current price, percentage change, and price chart are updated instantly
+- ⭐ **Add to Watchlist** → Users can save stocks to a watchlist (stored in `localStorage`)
+- 🔔 **Set Price Alert** → Users get a UI notification when the stock crosses their target price
